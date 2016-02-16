@@ -1,5 +1,7 @@
 package com.tianyuan.xl.system.interceptor;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -33,10 +35,22 @@ public class LogInterceptor implements HandlerInterceptor {
 	
 	private Long beginTime;// 1、开始时间
 	private Long endTime;// 2、结束时间
+	
+	private List<String> excludeUrls;// 不需要拦截的资源
+
+
+	public List<String> getExcludeUrls() {
+		return excludeUrls;
+	}
+
+	public void setExcludeUrls(List<String> excludeUrls) {
+		this.excludeUrls = excludeUrls;
+	}
 
 	public boolean preHandle(HttpServletRequest request,
 			HttpServletResponse response, Object handler) throws Exception {
 		beginTime = System.currentTimeMillis();//计时
+		System.out.println(beginTime);
 		return true;
 	}
 

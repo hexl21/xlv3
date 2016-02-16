@@ -48,13 +48,22 @@
     </bean> 
     
     <!-- 自定义拦截链配置 -->
-    <!-- <mvc:interceptors>
+    <mvc:interceptors>
         <mvc:interceptor>
+        <!-- 
             <mvc:mapping path="/*/*/create"/>
             <mvc:mapping path="/*/*/delete/*"/>
             <mvc:mapping path="/*/*/update"/>
-            <bean class="com.tianyuan.jety.system.interceptor.LogInterceptor"></bean>
+        -->
+        	<mvc:mapping path="/**" />
+            <bean class="com.tianyuan.xl.system.interceptor.LogInterceptor">
+            	<property name="excludeUrls">
+					<list>
+						<value>/resource/tree</value><!-- 首页左侧功能菜单 -->
+						<value>/app**/**</value><!-- app接口 -->
+					</list>
+				</property>
+            </bean>
         </mvc:interceptor>
-    </mvc:interceptors> -->
-	
+    </mvc:interceptors> 
 </beans>
