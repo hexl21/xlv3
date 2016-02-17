@@ -46,8 +46,7 @@
             </props>  
 		</property>  
     </bean> 
-    
-    <!-- 自定义拦截链配置 -->
+     <!-- 自定义拦截链配置 -->
     <mvc:interceptors>
         <mvc:interceptor>
         <!-- 
@@ -61,10 +60,12 @@
 					<list>
 						<value>/system/login</value><!-- 登录 -->
 						<value>/a/login</value><!-- 登录 -->
+						<value>/out/login</value><!-- 登录 -->
 						<value>/app**/**</value><!-- app接口 -->
 					</list>
 				</property>
             </bean>
         </mvc:interceptor>
     </mvc:interceptors> 
+   
 </beans>

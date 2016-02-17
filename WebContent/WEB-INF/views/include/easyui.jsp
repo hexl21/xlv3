@@ -67,7 +67,7 @@ $.ajaxSetup({
           var sessionstatus=XMLHttpRequest.getResponseHeader("sessionstatus"); 
           if(sessionstatus=="timeout"){
                //跳转的登录页面
-               window.location.replace('${ctx}/a/login');
+               parent.window.location.replace('${ctx}/a/login');
        		}	
     }
 });

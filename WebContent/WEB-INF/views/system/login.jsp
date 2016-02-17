@@ -12,8 +12,8 @@ request.setAttribute("error", error);
 <html>
 <head>
 	<title>基础平台</title>
-	<script src="${ctx}/static/plugins/easyui/jquery/jquery-1.11.1.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="${ctx}/static/css/bglogin.css" />
+	<script src="${ctx}/static/plugins/easyui/jquery/jquery-1.11.1.min.js"></script>
 	<script>
 	var captcha;
 	function refreshCaptcha(){  
