@@ -4,13 +4,10 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
-
 import com.tianyuan.xl.common.mapper.JsonMapper;
 import com.tianyuan.xl.common.utils.DateUtils;
 import com.tianyuan.xl.common.utils.Global;
@@ -20,7 +17,6 @@ import com.tianyuan.xl.system.service.LogService;
 import com.tianyuan.xl.system.service.UserService;
 import com.tianyuan.xl.system.utils.IPUtil;
 import com.tianyuan.xl.system.utils.UserUtil;
-
 import eu.bitwalker.useragentutils.UserAgent;
 
 /**
