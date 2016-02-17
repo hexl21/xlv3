@@ -83,7 +83,7 @@ public class UserRealm extends AuthorizingRealm {
 		//赋予权限
 		for(Permission permission:permissionService.getPermissions(user.getId())){
 			if(StringUtils.isNotBlank(permission.getPermCode()))
-			info.addStringPermission(permission.getPermCode());
+			info.addStringPermission(permission.getPermCode().equals("null")?"":permission.getPermCode());
 		}
 		
 		//设置登录次数、时间
