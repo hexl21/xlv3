@@ -12,14 +12,14 @@
 		<tr>
 			<td>菜单名称：</td>
 			<td>
-				<input type="hidden" name="id" value="${permission.id }"/>
+				<input type="hidden" name="id" value="${permission.id}"/>
 				<input type="hidden" name="type" value="F"/>
-				<input id="name" name="name" type="text" value="${permission.name }" class="easyui-validatebox" data-options="width: 180,required:'required',validType:'length[2,20]'"/>
+				<input id="name" name="name" type="text" value="${permission.name}" class="easyui-validatebox" data-options="width: 180,required:'required',validType:'length[2,20]'"/>
 			</td>
 		</tr>
 		<tr>
 			<td>菜单路径：</td>
-			<td><input id="url" name="url" type="text" value="${permission.url }" class="easyui-validatebox"  data-options="width: 180" class="easyui-validatebox"/></td>
+			<td><input id="url" name="url" type="text" value="${permission.url}" class="easyui-validatebox"  data-options="width: 180" class="easyui-validatebox"/></td>
 		</tr>
 		<tr>
 			<td>菜单图标：</td>
@@ -29,11 +29,11 @@
 		</tr>
 		<tr>
 			<td>上级菜单：</td>
-			<td><input id="pid" name="pid" value="${permission.pid }"/></td>
+			<td><input id="pid" name="pid" value="${permission.pid}"/></td>
 		</tr>
 		<tr>
 			<td>排序：</td>
-			<td><input id="sort" type="text" name="sort" value="${permission.sort }" class="easyui-numberbox" data-options="width: 180" /></td>
+			<td><input id="sort" type="text" name="sort" value="${permission.sort}" class="easyui-numberbox" data-options="width: 180" /></td>
 		</tr>
 		<tr>
 			<td>描述：</td>
