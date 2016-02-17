@@ -4,7 +4,7 @@ import org.apache.shiro.authc.AuthenticationException;
 
 /**
  * 验证码异常类
- * @author ty
+ * @author xl
  * @date 2014年12月2日 下午10:44:54
  */
 public class CaptchaException extends AuthenticationException {

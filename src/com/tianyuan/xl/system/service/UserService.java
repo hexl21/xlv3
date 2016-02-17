@@ -2,6 +2,7 @@ package com.tianyuan.xl.system.service;
 
 import java.io.Serializable;
 
+import org.hibernate.SQLQuery;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -16,7 +17,7 @@ import com.tianyuan.xl.system.entity.User;
 
 /**
  * 用户service
- * @author ty
+ * @author xl
  * @date 2015年1月13日
  */
 @Service
@@ -35,7 +36,16 @@ public class UserService extends BaseService<User, Serializable> {
 	public HibernateDao<User, Serializable> getEntityDao() {
 		return userDao;
 	}
-
+	
+	/**
+	 * 查询用户信息
+	 * @param userName 用户name
+	 * @return user
+	 */
+	public User getUserInfo(String userName){
+		return userDao.getUserInfo(userName);
+	}
+	
 	/**
 	 * 保存用户
 	 * @param user

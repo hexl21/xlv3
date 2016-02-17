@@ -14,7 +14,7 @@ import org.slf4j.LoggerFactory;
 
 /**
  * session监听器
- * @author ty
+ * @author XL
  * @date 2015年1月15日
  */
 @WebListener
