@@ -55,7 +55,7 @@ public class LogInterceptor implements HandlerInterceptor {
 		User userSessionInfo = (User) request.getSession().getAttribute(Global.getConfig("userSessionInfo"));
 //		//判断是否包含在菜单权限里
 
-		if ((url.indexOf("/system/login") > -1) || excludeUrls.contains(url)) {// 如果要访问的资源是不需要验证的
+		if (excludeUrls.contains(url)) {// 如果要访问的资源是不需要验证的
 			return true;
 		}
 		

@@ -46,8 +46,7 @@
             </props>  
 		</property>  
     </bean> 
-    
-    <!-- 自定义拦截链配置 -->
+     <!-- 自定义拦截链配置 -->
     <mvc:interceptors>
         <mvc:interceptor>
         <!-- 
@@ -68,4 +67,5 @@
             </bean>
         </mvc:interceptor>
     </mvc:interceptors> 
+   
 </beans>
