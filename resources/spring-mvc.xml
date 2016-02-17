@@ -59,7 +59,8 @@
             <bean class="com.tianyuan.xl.system.interceptor.LogInterceptor">
             	<property name="excludeUrls">
 					<list>
-						<value>/resource/tree</value><!-- 首页左侧功能菜单 -->
+						<value>/system/login</value><!-- 登录 -->
+						<value>/a/login</value><!-- 登录 -->
 						<value>/app**/**</value><!-- app接口 -->
 					</list>
 				</property>

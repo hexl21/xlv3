@@ -89,7 +89,7 @@
     <url-pattern>/static/images/kaptcha.jpg</url-pattern>
   </servlet-mapping>
   <session-config>
-    <session-timeout>20</session-timeout>
+    <session-timeout>2</session-timeout>
   </session-config>
   <error-page>
     <exception-type>java.lang.Throwable</exception-type>

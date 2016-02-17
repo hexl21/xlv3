@@ -3,4 +3,3 @@
 <%
 	response.sendRedirect("system/login");
 %>
-11

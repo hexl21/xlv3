@@ -11,7 +11,7 @@ import com.google.common.collect.Maps;
 
 /**
  * 全局配置类
- * @author ty
+ * @author xl
  * @date 2014年12月31日
  */
 public class Global {

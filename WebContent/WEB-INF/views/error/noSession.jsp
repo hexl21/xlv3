@@ -3,5 +3,5 @@
 <c:set var="ctx" value="${pageContext.request.contextPath}"/>
 ${msg}
 <script type="text/javascript" charset="utf-8">
-	setTimeout("parent.location.href='${ctx}/admin/index'",1500);
+	setTimeout("parent.location.href='${ctx}/a/login'",1500);
 </script>

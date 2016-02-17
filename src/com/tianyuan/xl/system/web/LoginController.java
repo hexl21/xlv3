@@ -1,8 +1,11 @@
 package com.tianyuan.xl.system.web;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.subject.Subject;
 import org.apache.shiro.web.filter.authc.FormAuthenticationFilter;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,6 +13,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.tianyuan.xl.common.utils.Global;
+import com.tianyuan.xl.system.entity.User;
+import com.tianyuan.xl.system.service.UserService;
+
 
 /**
  * 登录controller
@@ -19,6 +25,10 @@ import com.tianyuan.xl.common.utils.Global;
 @Controller
 @RequestMapping(value = "{adminPath}")
 public class LoginController{
+	
+	@Autowired
+	private UserService userService;
+	
 	
 	/**
 	 * 默认页面
@@ -56,6 +66,17 @@ public class LoginController{
 		Subject subject = SecurityUtils.getSubject();
 		subject.logout();
 		return "system/login";
+	}
+	/**
+	 * 主页
+	 * @param userName
+	 * @param model
+	 * @return
+	 */
+	@RequestMapping("/index")
+	public String index(HttpServletRequest request) {
+		User user = userService.getUser("");
+		return "/system/index";	
 	}
 	
 }
