@@ -21,35 +21,39 @@
 <script type="text/javascript">
 	var panels = [ {
 		id : 'p1',
-		title : 'Tutorials',
+		title : '公告',
 		height : 200,
 		collapsible : true,
-		href : 'system/user'
+		closable : true,
+		href : 'portal/info'
 	}, {
 		id : 'p2',
-		title : 'Clock',
-		href : 'portal_p2.html'
+		title : '新闻',
+		href : 'portal/news'
 	}, {
 		id : 'p3',
-		title : 'PropertyGrid',
+		title : '待办',
 		height : 200,
 		collapsible : true,
 		closable : true,
-		href : 'portal_p3.html'
+		href : 'portal/record'
 	}, {
 		id : 'p4',
-		title : 'DataGrid',
+		title : '记录',
 		height : 200,
+		collapsible : true,
 		closable : true,
-		href : 'portal_p4.html'
+		href : 'portal/todo'
 	}, {
 		id : 'p5',
-		title : 'Searching',
-		href : 'portal_p5.html'
+		title : '查询',
+		closable : true,
+		href : 'portal/query'
 	}, {
 		id : 'p6',
-		title : 'Graph',
-		href : 'portal_p6.html'
+		title : '统计图',
+		closable : true,
+		href : 'portal/charts'
 	} ];
 	function getCookie(name) {
 		var cookies = document.cookie.split(';');
@@ -182,7 +186,7 @@
 				data-options="fit:true,border:false">
 				<script id="menu" type="text/html">
 			{{each data as p_permission}}
-				{{if (p_permission.pid==null)}}
+				{{if (p_permission.pid==null||p_permission.pid=='')}}
    				 <div title="{{p_permission.name }}" style="padding: 5px;" data-options="border:false,iconCls:'{{p_permission.icon }}'">
 					<div>
 					{{each data as c_permission}}	
