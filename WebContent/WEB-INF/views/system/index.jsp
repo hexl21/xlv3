@@ -57,7 +57,7 @@
             <div id="myMenu" class="easyui-accordion" data-options="fit:true,border:false">
             <script id="menu" type="text/html">
 			{{each data as p_permission}}
-				{{if (p_permission.pid==null)}}
+				{{if (p_permission.pid==null||p_permission.pid=='')}}
    				 <div title="{{p_permission.name }}" style="padding: 5px;" data-options="border:false,iconCls:'{{p_permission.icon }}'">
 					<div>
 					{{each data as c_permission}}	
