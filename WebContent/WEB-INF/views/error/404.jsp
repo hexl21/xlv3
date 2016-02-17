@@ -8,7 +8,11 @@
 <head>
 	<title>404 - 页面不存在</title>
 </head>
-
+<style type="text/css">
+	body{
+		background: background: url('../static/images/error/404.jpg');
+	}
+</style>
 <body>
 	<h2>404 - 页面不存在.</h2>
 </body>

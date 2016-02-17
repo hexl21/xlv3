@@ -61,6 +61,7 @@
 					<list>
 						<value>/system/login</value><!-- 登录 -->
 						<value>/a/login</value><!-- 登录 -->
+						<value>/out/login</value><!-- 登录 -->
 						<value>/app**/**</value><!-- app接口 -->
 					</list>
 				</property>
