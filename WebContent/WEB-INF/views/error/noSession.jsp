@@ -2,5 +2,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:set var="ctx" value="${pageContext.request.contextPath}"/>
 <script type="text/javascript" charset="utf-8">
-	setTimeout("parent.location.href='${ctx}/system/login'",1500);
+	setTimeout("parent.location.href='${ctx}/a/login'",1500);
 </script>
